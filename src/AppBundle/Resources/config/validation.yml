@@ -1,0 +1,4 @@
+AppBundle\Model\PriceInterface:
+    getters:
+        value:
+            - NotBlank: ~
