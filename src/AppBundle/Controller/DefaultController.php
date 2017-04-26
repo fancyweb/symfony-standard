@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Model\Product;
 use AppBundle\Model\ProductPrice;
+use AppBundle\Model\VariantSamplePrice;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,12 +16,8 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $product = new Product();
+        $variantSamplePrice = new VariantSamplePrice();
 
-        $productPrice = new ProductPrice();
-
-        $product->addProductPrice($productPrice);
-
-        dump($this->get('validator')->validate($productPrice)); die();
+        dump($this->get('validator')->validate($variantSamplePrice)); die();
     }
 }
